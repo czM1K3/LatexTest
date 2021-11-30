@@ -13,9 +13,9 @@ jobs:
         with:
           root_file: main.tex
       - name: Rename file
-        run: mv main.pdf codeventure.pdf
+        run: mv main.pdf Output.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: codeventure.pdf
+          files: Output.pdf
